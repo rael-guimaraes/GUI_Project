@@ -6,6 +6,7 @@
 package barber_app_project;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -50,12 +51,20 @@ public class RegisterPage extends JFrame implements ActionListener{
 
         
        JPanel topPanel = new JPanel();
-       topPanel.add(appName);
-       topPanel.add(myCmb);
-       topPanel.add(text);
-       this.add(topPanel, BorderLayout.PAGE_START);
+       JPanel topPanel_11 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+       JPanel topPanel_12 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
        
-        JPanel centerPanel = new JPanel();
+       topPanel_11.add(appName);
+       topPanel_12.add(myCmb);
+       topPanel.add(text);
+       
+       topPanel.add(topPanel_11);
+       topPanel.add(topPanel_12);
+       
+       GridLayout topLayout = new GridLayout(1, 2);
+       topPanel.setLayout(topLayout);
+       this.add(topPanel, BorderLayout.PAGE_START);
+
          
         JLabel name = new JLabel("please enter your name");
         JTextField nameTF = new JTextField(20);
@@ -72,21 +81,53 @@ public class RegisterPage extends JFrame implements ActionListener{
         JLabel button = new JLabel("  ");
         JButton submitButton = new JButton("Submit");
         
-        centerPanel.add(name);
-        centerPanel.add(nameTF);
-        centerPanel.add(phone);
-        centerPanel.add(phoneTF);
-        centerPanel.add(email);
-        centerPanel.add(emailTF);
-        centerPanel.add(location);
-        centerPanel.add(locationTF);
-        centerPanel.add(password);
-        centerPanel.add(passwordTF);
-        centerPanel.add(confirmPass);
-        centerPanel.add(confirmPassTF);
-        centerPanel.add(button);
-        centerPanel.add(submitButton);
+                JPanel centerPanel = new JPanel();
         
+        JPanel centerPanel_11 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_12 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel centerPanel_21 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_22 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel centerPanel_31 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_32 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel centerPanel_41 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_42 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel centerPanel_51 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_52 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel centerPanel_61 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_62 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel centerPanel_71 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel centerPanel_72 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        
+        centerPanel_11.add(name);
+        centerPanel_12.add(nameTF);
+        centerPanel_21.add(phone);
+        centerPanel_22.add(phoneTF);
+        centerPanel_31.add(email);
+        centerPanel_32.add(emailTF);
+        centerPanel_41.add(location);
+        centerPanel_42.add(locationTF);
+        centerPanel_51.add(password);
+        centerPanel_52.add(passwordTF);
+        centerPanel_61.add(confirmPass);
+        centerPanel_62.add(confirmPassTF);
+        centerPanel_71.add(button);
+        centerPanel_72.add(submitButton);
+        
+            centerPanel.add(centerPanel_11);
+            centerPanel.add(centerPanel_12);
+            centerPanel.add(centerPanel_21);
+            centerPanel.add(centerPanel_22);
+            centerPanel.add(centerPanel_31);
+            centerPanel.add(centerPanel_32);
+            centerPanel.add(centerPanel_41);
+            centerPanel.add(centerPanel_42);
+            centerPanel.add(centerPanel_51);
+            centerPanel.add(centerPanel_52);
+            centerPanel.add(centerPanel_61);
+            centerPanel.add(centerPanel_62);
+            centerPanel.add(centerPanel_71);
+            centerPanel.add(centerPanel_72);
+           
         GridLayout centerLayout = new GridLayout(7, 2);
         centerPanel.setLayout(centerLayout);
         this.add(centerPanel, BorderLayout.CENTER);
