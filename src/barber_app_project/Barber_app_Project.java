@@ -7,6 +7,11 @@ package barber_app_project;
 
 
 
+import barber_app_project.customerUser.CustomerPage;
+import barber_app_project.provider.ProviderPage;
+import barber_app_project.registerUser.RegisterUserPage;
+import barber_app_project.login.LoginController;
+import barber_app_project.providerService.providerService.ProviderServiceController;
 import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.*;
@@ -24,7 +29,7 @@ public class Barber_app_Project  extends JFrame{
     public static void main(String[] args) {
        
         
-            new Controller ();
+           new LoginController();
              
     }
  
